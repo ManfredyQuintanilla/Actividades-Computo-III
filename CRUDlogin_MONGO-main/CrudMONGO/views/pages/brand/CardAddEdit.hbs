@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  </head>
+
+</head>
+<body>
+    <div>
+     {{> header}}
+    </div>
+    <div class="card text-center">
+    <div class="card-header">
+       <h2>Agregar o modificar datos de una Tarjeta de Credito
+    </div>
+    <div class="card-body">
+       
+        <div class="container">
+            <div class="content-fluid">
+                <form action="/brand" method="POST">
+                    <input type="hidden" name="_id" value=""/>
+                    
+                    <div class="form-floating">
+                        <input class="form-control" type="text" name="tipo_tarjeta" value="{{card.tipo_tarjeta}}"></input>
+                        <label for="floatingTextarea"> Tipo de tarjeta a registrar: </label>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input class="form-control" type="text" name="nombre_titular" value="{{card.nombre_titular}}"></input>
+                        <label for="floatingTextarea"> Nombre del titular de la tajeta: </label>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input class="form-control" type="Number" name="numero_tarjeta" value="{{card.numero_tarjeta}}"></input>
+                        <label for="floatingTextarea"> Número de la tarjeta: </label>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input class="form-control" type="text" name="fecha_expiracion" value="{{card.fecha_expiracion}}"></input>
+                        <label for="floatingTextarea"> Fecha de expiracion de la tarjeta: </label>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input class="form-control" type="password" name="codigo_seguridad" value="{{card.codigo_seguridad}}"></input>
+                        <label for="floatingTextarea"> Código de seguridad: </label>
+                    </div>
+                    <br>
+                    
+                    <button type="submit" class="btn btn-danger">Save</button>
+                </form> 
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
